@@ -45,7 +45,7 @@ class MyClient(discord.Client):
                         await user.edit(nick = 'Groovy')
                     elif(user.name == 'Dynamic Channel Name Bot'):
                         await user.edit(nick = 'DCN Bot')
-                    elif(user.name != 'Matt' and user.name != 'Sigmadelta8'):
+                    elif(user.guild_permissions.administrator != True):
                         if(chrisTime == 0):
                             tempNick = f'kingchris{modifier}'
                             modifier += 1
