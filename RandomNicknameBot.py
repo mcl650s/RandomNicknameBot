@@ -54,8 +54,11 @@ class MyClient(discord.Client):
                                 tempNick = random.choice(tempNickList)
                                 tempNickList.remove(tempNick)
                             else:
-                                tempNick = f'kingchris{modifier}'
-                                modifier += 1
+                                if(user.name == 'kingchris233'):
+                                    tempNick = 'kingchris233'
+                                else:
+                                    tempNick = f'kingchris{modifier}'
+                                    modifier += 1
                         await user.edit(nick=tempNick)
                 await asyncio.sleep(86400) #Randomizes Once a day
 
